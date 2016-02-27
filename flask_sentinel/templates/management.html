@@ -45,6 +45,7 @@
                         <thead>
                             <tr>
                                 <th>Client ID</th>
+                                <th>Client Secret</th>
                                 <th>Type</th>
                             </tr>
                         </thead>
@@ -52,6 +53,7 @@
                             {% for client in clients %}
                             <tr>
                                 <td>{{ client.client_id }}</td>
+                                <td>{{ client.client_secret }}</td>
                                 <td>{{ client.client_type }}</td>
                             </tr>
                             {% endfor %}

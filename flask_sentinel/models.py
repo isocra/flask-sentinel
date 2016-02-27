@@ -80,6 +80,7 @@ class Client(BaseModel):
         super(Client, self).__init__(id)
         self._client_id = client_id
         self._client_type = client_type
+        self._client_secret = None
 
     @property
     def client_id(self):
@@ -116,6 +117,14 @@ class Client(BaseModel):
             redirects.
         """
         return ''
+
+    @property
+    def client_secret(self):
+        return self._client_secret
+
+    @client_secret.setter
+    def client_secret(self, value):
+        self._client_secret = value
 
 
 class Token(BaseModel):
